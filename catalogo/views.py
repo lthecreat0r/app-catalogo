@@ -1,24 +1,5 @@
-from django.shortcuts import render
-
-obras = [
-    {
-        "id": 1,
-        "titulo": "Interestelar",
-        "tipo": "Filme",
-        "ano": 2014,
-        "genero": "Ficção científica",
-        "descricao": "Um grupo de exploradores viaja através de um buraco de minhoca no espaço."
-    },
-    {
-        "id": 2,
-        "titulo": "Stranger Things",
-        "tipo": "Série",
-        "ano": 2016,
-        "genero": "Suspense",
-        "descricao": "Um grupo de amigos enfrenta acontecimentos sobrenaturais em sua cidade."
-    },
-]
-
+from django.shortcuts import render, get_list_or_404
+from .models import Obra
 def index(request):
     context = {
         "obras": obras,
@@ -31,13 +12,10 @@ def index(request):
     )
 
 
+
 def detalhes(request, id):
 
-    obra_encontrada = None
-
-    for obra in obras:
-        if obra["id"] == id:
-            obra_encontrada = obra
+    obra = get_object_or_404(Obra, id=id)
 
     context = {
         "obra": obra_encontrada,
