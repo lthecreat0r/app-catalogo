@@ -35,3 +35,5 @@ Siga os passos abaixo para executar a aplicação em sua máquina:
    ```bash
    python manage.py runserver
    ```
+<img width="1078" height="899" alt="1000208290" src="https://github.com/user-attachments/assets/2a8f9b26-b8c4-4b15-aa73-df0b813955dc" />
+<img width="928" height="635" alt="1000208289" src="https://github.com/user-attachments/assets/69cff427-6463-4273-a6d5-29c8bbdb31f7" />
